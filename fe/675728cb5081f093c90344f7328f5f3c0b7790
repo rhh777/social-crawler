@@ -1,0 +1,34 @@
+THIRD-PARTY-NOTICES.md
+  s_99838236216699::t_ef798bd2c4cc4c 23-47
+CONTRIBUTING.md
+  s_99838236216699::t_9b97eb26454d70 1-65
+SECURITY.md
+  s_99838236216699::t_54d625344f5eaf 1-27
+docs/README.md
+  s_99838236216699::t_086f3feb0e8c53 30-38
+docs/guides/configuration.md
+  s_99838236216699::t_c6de5ca0db0a32 13-28
+CHANGELOG.md
+  s_99838236216699::t_4e060b61e42375 1-28
+README.md
+  s_99838236216699::t_cbbceff6034e69 47-48
+  s_99838236216699::t_5cd01bc1e43765 3-5,11-12
+  s_99838236216699::t_1f63f1b9a5680b 10
+  s_99838236216699::t_7c84d246420d90 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "fe675728cb5081f093c90344f7328f5f3c0b7790",
+  "prompts": {},
+  "sessions": {
+    "s_99838236216699": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "neat-faucet",
+        "model": "unknown"
+      },
+      "human_author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  }
+}
