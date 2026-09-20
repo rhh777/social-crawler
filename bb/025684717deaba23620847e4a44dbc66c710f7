@@ -1,0 +1,61 @@
+tests/test_scheduler.py
+  s_98774b26fd47e0::t_83c42622a1a0a2 312,324
+tests/test_proxy_pool.py
+  s_98774b26fd47e0::t_86cdcc7cdff93d 13,40-53,157,177,185,190,192
+  s_98774b26fd47e0::t_c39bbe67ed4048 1-12,14-39,54-66,68-105,107-156,158-176,178-184,186-189,191,193-213
+  s_98774b26fd47e0::t_024e45bf53ff7a 106
+  s_98774b26fd47e0::t_d77cd62736c4e8 67
+src/social_crawler/interfaces/web_static/style.css
+  s_98774b26fd47e0::t_21c2723b4fb937 2749-2763,2765-2799,2801-2809
+  s_98774b26fd47e0::t_da2c3aba7ae304 2764,2800
+src/social_crawler/storage/migrations/versions/0008_proxy_pool.py
+  s_98774b26fd47e0::t_4f9543529ebc2c 1-18
+src/social_crawler/interfaces/web_static/index.html
+  s_98774b26fd47e0::t_b4f6a98892274e 8,29-30,80
+src/social_crawler/environments/session.py
+  s_98774b26fd47e0::t_4f9543529ebc2c 50
+src/social_crawler/interfaces/web_static/app.js
+  s_98774b26fd47e0::t_b4f6a98892274e 275,288,303,706,1725-1733,1735-1742,1747-1748,1755,1757,1764,1796,1801-1802,1820,1929,1933,1935,1978-1979
+  s_98774b26fd47e0::t_21c2723b4fb937 1769-1770,1780-1783,1852-1859,1861-1921
+  s_98774b26fd47e0::t_024e45bf53ff7a 198,1860
+  s_98774b26fd47e0::t_eb82752b83141f 1922,2393
+tests/test_account_browser.py
+  s_98774b26fd47e0::t_83c42622a1a0a2 137
+tests/test_configuration.py
+  s_98774b26fd47e0::t_2dc5b7ff7c59ab 128,159
+docs/guides/web-console.md
+  s_98774b26fd47e0::t_a5b1b713359841 15-22
+tests/test_web.py
+  s_98774b26fd47e0::t_2dc5b7ff7c59ab 1799-1854
+src/social_crawler/interfaces/web.py
+  s_98774b26fd47e0::t_83c42622a1a0a2 477-479,485,716-719,889,1709,1715-1716
+  s_98774b26fd47e0::t_c4d476b0f09610 519,522-524,560-563,798-801,896-900,903,948-950
+  s_98774b26fd47e0::t_d8f07487306b5f 347-350,652,655,667,961,3138-3141,3281-3284,3353,3356-3358
+  s_98774b26fd47e0::t_10c9549a138479 456-476,480-484,486-518,520-521,525-537,541-542,545-559,564-565,737,773-775,930-931,947,951-952,955,960,966-971,1028-1031
+  s_98774b26fd47e0::t_06f3b554344210 330,354-359,440,446,3376-3381
+  s_98774b26fd47e0::t_454245d1c8ec85 538-540,543-544
+  s_98774b26fd47e0::t_8ea1e279bc3072 1767-1772
+  s_98774b26fd47e0::t_4b9b2128e6003e 353
+src/social_crawler/storage/store.py
+  s_98774b26fd47e0::t_4f9543529ebc2c 153-161,1729-1741,1743-1750,1760-1764
+  s_98774b26fd47e0::t_454245d1c8ec85 1742,1751-1759
+  s_98774b26fd47e0::t_9389383214f9ba 1765
+tests/test_account_controls.py
+  s_98774b26fd47e0::t_83c42622a1a0a2 123,128-129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "bb025684717deaba23620847e4a44dbc66c710f7",
+  "prompts": {},
+  "sessions": {
+    "s_98774b26fd47e0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0bf92-7fca-7741-bf85-af11201490f9",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  }
+}
