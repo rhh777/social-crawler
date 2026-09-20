@@ -1,0 +1,33 @@
+.dockerignore
+  s_99838236216699::t_7544226a0eb955 14
+.github/ISSUE_TEMPLATE/config.yml
+  s_99838236216699::t_4d7984442ab916 1
+.github/workflows/ci.yml
+  s_99838236216699::t_18e18043b66d36 64,66
+  s_99838236216699::t_9c114f8b68e88f 1-63,65,67-75
+.github/ISSUE_TEMPLATE/bug_report.yml
+  s_99838236216699::t_bdad2c9320df08 10
+  s_99838236216699::t_0ea376ada25a17 1-9,11-78
+.github/pull_request_template.md
+  s_99838236216699::t_ec28ed2cc48b17 1-19
+.github/ISSUE_TEMPLATE/feature_request.yml
+  s_99838236216699::t_0391e394c6dc81 1-31
+pyproject.toml
+  s_99838236216699::t_2d7b9039d0f0e7 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "e6df57080cf01caee37ab228d73c5cbcd6e942fc",
+  "prompts": {},
+  "sessions": {
+    "s_99838236216699": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "neat-faucet",
+        "model": "unknown"
+      },
+      "human_author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  }
+}
