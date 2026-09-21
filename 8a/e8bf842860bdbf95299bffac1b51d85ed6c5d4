@@ -1,0 +1,45 @@
+docs/guides/agent-analysis.md
+  s_a60ce7af029581::t_506c7059e54aef 12,22,24
+src/social_crawler/analysis/config.py
+  s_a60ce7af029581::t_fd4e0db8b9ef12 52-62,138
+  s_a60ce7af029581::t_81d3494a706c60 31-34,92-125,146
+  s_a60ce7af029581::t_ad3ee888946ffe 68-85,88,127-134,136,139,141
+src/social_crawler/interfaces/web_static/app.js
+  s_a60ce7af029581::t_ad3ee888946ffe 2009-2011
+  s_a60ce7af029581::t_c6404ba8ec9057 2016,2018-2019,2039-2055
+  s_a60ce7af029581::t_4bddc4d4dd0bfb 2020-2021,2023-2025,2029-2034
+  s_a60ce7af029581::t_9f4bc333e5c16e 2056-2057
+src/social_crawler/analysis/agent.py
+  s_a60ce7af029581::t_81d3494a706c60 6-7,57-72,80-125,191
+  s_a60ce7af029581::t_5c2df40a49e751 73-79
+src/social_crawler/analysis/service.py
+  s_a60ce7af029581::t_81d3494a706c60 12,134-138
+  s_a60ce7af029581::t_f5cafa099461ad 139
+src/social_crawler/interfaces/web_static/index.html
+  s_a60ce7af029581::t_c6404ba8ec9057 80
+tests/test_analysis.py
+  s_a60ce7af029581::t_fd4e0db8b9ef12 565-570
+  s_a60ce7af029581::t_4e07d91d0b7a48 533-538,548,550-551,571-612,673-674,684-690,696,700,704-705,707-711
+  s_a60ce7af029581::t_0da7b09c54908a 675-683,691-695,697-699,701-703,706,712-715
+  s_a60ce7af029581::t_ad3ee888946ffe 539-547,549,552-564
+src/social_crawler/interfaces/web.py
+  s_a60ce7af029581::t_81d3494a706c60 3252-3253
+docs/design/analysis.md
+  s_a60ce7af029581::t_506c7059e54aef 25,27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "8ae8bf842860bdbf95299bffac1b51d85ed6c5d4",
+  "prompts": {},
+  "sessions": {
+    "s_a60ce7af029581": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c1ea-2772-7483-b13b-3855aefc08f4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  }
+}
