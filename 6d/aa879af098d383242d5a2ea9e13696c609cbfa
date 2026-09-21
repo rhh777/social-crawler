@@ -1,0 +1,39 @@
+src/social_crawler/analysis/agent.py
+  s_b13d68b414abc7::t_d591d91d9186ed 8-12,115,125-127,217,234-239
+  s_b13d68b414abc7::t_ed5ba8df572bbd 231
+tests/test_analysis.py
+  s_b13d68b414abc7::t_f6ca8116fead31 350-354,432-443,744-750,755-760,767,781-791,869-870
+  s_b13d68b414abc7::t_292dec8f65d8e2 994-1000,1015,1017-1021
+  s_b13d68b414abc7::t_ed5ba8df572bbd 1016
+docs/design/analysis.md
+  s_b13d68b414abc7::t_78a41adfb5d3e9 34,40
+docs/guides/agent-analysis.md
+  s_b13d68b414abc7::t_7ba32a3f5462dc 15-29,72
+src/social_crawler/interfaces/web_static/app.js
+  s_b13d68b414abc7::t_21ff13b3b9d66e 2015-2037
+src/social_crawler/analysis/config.py
+  s_b13d68b414abc7::t_ed5ba8df572bbd 139,216
+  s_b13d68b414abc7::t_916408da46684b 161,178
+  s_b13d68b414abc7::t_1765a2464749d9 12-25,57,77-101,114,119-137,152,154-160,162-177,179-188,193,198-200,202-208,213-215,217-236,260,272-273
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "6daa879af098d383242d5a2ea9e13696c609cbfa",
+  "prompts": {},
+  "humans": {
+    "h_b5330be8abb2bc": {
+      "author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  },
+  "sessions": {
+    "s_b13d68b414abc7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c349-56cb-72e0-8b22-142b8af148a9",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  }
+}
