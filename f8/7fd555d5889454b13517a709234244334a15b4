@@ -1,0 +1,54 @@
+src/social_crawler/interfaces/web.py
+  s_a60ce7af029581::t_5fa47d2065c35d 345,351
+  s_a60ce7af029581::t_a6c79f8b772b0c 346-350
+src/social_crawler/analysis/agent.py
+  s_a60ce7af029581::t_a6c79f8b772b0c 13-14,64-79,177,187-193
+  s_a60ce7af029581::t_5fa47d2065c35d 26-33,209-211,213-225,227-229,231-233
+src/social_crawler/interfaces/web_static/style.css
+  s_a60ce7af029581::t_0be3d97e1ecc6c 2335,2339-2348,2515,2517
+  s_a60ce7af029581::t_28255accba0cee 2336-2338,2516
+src/social_crawler/analysis/service.py
+  s_a60ce7af029581::t_a6c79f8b772b0c 34,38,281
+  s_a60ce7af029581::t_5fa47d2065c35d 37,206
+docs/design/analysis.md
+  s_a60ce7af029581::t_b5b4cff625fee4 15,19-28
+docs/guides/agent-analysis.md
+  s_a60ce7af029581::t_b5b4cff625fee4 48-56,63-69
+src/social_crawler/interfaces/web_static/index.html
+  s_a60ce7af029581::t_28255accba0cee 8,80
+src/social_crawler/analysis/data.py
+  s_a60ce7af029581::t_df48cf38a99662 3,5,7-9,12-13,213,217-247,249-417,597-600,610-615
+  s_a60ce7af029581::t_c6d126ff2c433c 248
+  s_a60ce7af029581::t_5fa47d2065c35d 87-90
+  s_a60ce7af029581::t_a6c79f8b772b0c 605-609
+tests/test_analysis.py
+  s_a60ce7af029581::t_925bbe6d7c704a 621-643,647-650,655-658
+  s_a60ce7af029581::t_28255accba0cee 644-646,651-654
+  s_a60ce7af029581::t_52e88357fa50b6 443-519
+  s_a60ce7af029581::t_31c3d387e005e4 581,597
+  s_a60ce7af029581::t_70e240eeea9a51 14-20,121-153,155-194,198-201,382-394
+  s_a60ce7af029581::t_05612aaf8f8fee 39
+  s_a60ce7af029581::t_b9e966a2bf8706 154,195-197
+src/social_crawler/interfaces/web_static/app.js
+  s_a60ce7af029581::t_28255accba0cee 2164,2170,2192,2303
+  s_a60ce7af029581::t_f597b83dbb6154 2178,2180-2183
+  s_a60ce7af029581::t_cfdc2e287b28c0 2120,2136-2138,2140-2153,2156
+  s_a60ce7af029581::t_6dff6ee520af28 2244,2286,2307,2319-2320
+  s_a60ce7af029581::t_a6c79f8b772b0c 2129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "f87fd555d5889454b13517a709234244334a15b4",
+  "prompts": {},
+  "sessions": {
+    "s_a60ce7af029581": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c1ea-2772-7483-b13b-3855aefc08f4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  }
+}
