@@ -1,0 +1,65 @@
+deploy/docker/adspower/Dockerfile
+  s_36b3a620936324::t_41599238dc38c8 31,34-35
+THIRD-PARTY-NOTICES.md
+  s_36b3a620936324::t_a3c77c1558c5cc 35-38
+docs/operations/runtime.md
+  s_36b3a620936324::t_a3c77c1558c5cc 7,98
+deploy/docker/runtime.Dockerfile
+  s_36b3a620936324::t_41599238dc38c8 9
+pyproject.toml
+  s_36b3a620936324::t_a3c77c1558c5cc 39,42
+  s_36b3a620936324::t_733323f2332948 38
+docs/guides/configuration.md
+  s_36b3a620936324::t_a3c77c1558c5cc 121-123
+src/social_crawler/environments/adspower.py
+  s_36b3a620936324::t_a3c77c1558c5cc 18
+scripts/check_public_tree.py
+  s_36b3a620936324::t_a3c77c1558c5cc 51
+tests/test_deployment_config.py
+  s_36b3a620936324::t_a3c77c1558c5cc 7,15,20-21,23,25-26,40,50
+deploy/docker/kasmvnc/README.md
+  s_36b3a620936324::t_a3c77c1558c5cc 20
+deploy/k8s/README.md
+  s_36b3a620936324::t_740a93604344bc 14,47-56,58,67
+deploy/k8s/components/adspower/kustomization.yaml
+  s_36b3a620936324::t_f2ecc41e8662ee 1-6
+.gitignore
+  s_36b3a620936324::t_a3c77c1558c5cc 23
+.dockerignore
+  s_36b3a620936324::t_a3c77c1558c5cc 22
+Dockerfile
+  s_36b3a620936324::t_41599238dc38c8 70
+deploy/docker/adspower/README.md
+  s_36b3a620936324::t_a3c77c1558c5cc 5
+docs/design/accounts-and-browsers.md
+  s_36b3a620936324::t_a3c77c1558c5cc 13
+deploy/k8s/overlays/adspower/README.md
+  s_36b3a620936324::t_a3c77c1558c5cc 7,18,24-25,36
+deploy/README.md
+  s_36b3a620936324::t_740a93604344bc 1-15
+docs/README.md
+  s_36b3a620936324::t_a3c77c1558c5cc 27-29
+deploy/k8s/overlays/adspower/kustomization.yaml
+  s_36b3a620936324::t_f2ecc41e8662ee 5-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "9dfba38b7c8f8bb17fa8ade70384f9c81897fe2f",
+  "prompts": {},
+  "humans": {
+    "h_b5330be8abb2bc": {
+      "author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  },
+  "sessions": {
+    "s_36b3a620936324": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c36e-0a71-72e0-9d14-b4133474ee27",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "haorenhui <haorenhui0911@gmail.com>"
+    }
+  }
+}
