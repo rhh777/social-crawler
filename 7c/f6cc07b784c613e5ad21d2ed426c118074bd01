@@ -1,0 +1,22 @@
+tests/test_account_browser.py
+  s_ad410874c0db94::t_864591c7714962 160
+  s_ad410874c0db94::t_0ef31d3f485ccb 163-165
+src/social_crawler/interfaces/web_static/app.js
+  s_ad410874c0db94::t_0ef31d3f485ccb 1935,1971,1973
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "7cf6cc07b784c613e5ad21d2ed426c118074bd01",
+  "prompts": {},
+  "sessions": {
+    "s_ad410874c0db94": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c1d8-19b1-7051-a092-086f7be4276e",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  }
+}
