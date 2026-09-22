@@ -1,0 +1,90 @@
+README.md
+  s_326b5bf6c8f8f1::t_30cc348460f4a7 37-44
+docs/guides/web-console.md
+  s_326b5bf6c8f8f1::t_01c4765176f7bb 21
+src/social_crawler/orchestration/media.py
+  s_326b5bf6c8f8f1::t_4d3c63a922e114 2,120,131,208-211,220,230-316
+  s_326b5bf6c8f8f1::t_9c960647c359fa 317
+deploy/docker/adspower/healthcheck.sh
+  s_326b5bf6c8f8f1::t_d085607806a9b9 5-17
+scripts/live_smoke.py
+  s_326b5bf6c8f8f1::t_184f37ca08a94d 169,202,213
+  s_326b5bf6c8f8f1::t_7198923b0bea79 203-212,214-235,255,264
+src/social_crawler/orchestration/worker.py
+  s_326b5bf6c8f8f1::t_63d48ea22463cc 10,26,50-55,58-68,71-77
+  s_326b5bf6c8f8f1::t_e7bbc1bd14a38c 69-70
+deploy/docker/adspower/entrypoint.sh
+  s_326b5bf6c8f8f1::t_ed9c2eb37026e6 31-37,39-41,44-71
+  s_326b5bf6c8f8f1::t_a73015328725ab 77-84,92
+tests/test_network.py
+  s_326b5bf6c8f8f1::t_1257b5df90a9ca 16-27,72-110,112
+  s_326b5bf6c8f8f1::t_64f307f0068198 111,113-136
+.env.example
+  s_326b5bf6c8f8f1::t_30cc348460f4a7 42-43,75
+tests/test_live_smoke.py
+  s_326b5bf6c8f8f1::t_7198923b0bea79 82-104,145-146,148-157,180-216,218-220
+  s_326b5bf6c8f8f1::t_184f37ca08a94d 135,147,217
+tests/test_deployment_config.py
+  s_326b5bf6c8f8f1::t_6212afab5b1afa 39-51
+  s_326b5bf6c8f8f1::t_d085607806a9b9 56,66
+  s_326b5bf6c8f8f1::t_369ba36a1abb5a 62-64
+  s_326b5bf6c8f8f1::t_a73015328725ab 61
+  s_326b5bf6c8f8f1::t_fdc50a77f3ddd9 65
+tests/test_web.py
+  s_326b5bf6c8f8f1::t_0f8158245ffe7a 384-412
+deploy/README.md
+  s_326b5bf6c8f8f1::t_30cc348460f4a7 5-7
+src/social_crawler/environments/network.py
+  s_326b5bf6c8f8f1::t_7f145dfcd715c8 28-34,147,149-150,153-194,267-274,281,283-284,286-292,294-319,325-336
+  s_326b5bf6c8f8f1::t_64f307f0068198 275-280,282,285,293,320-324
+  s_326b5bf6c8f8f1::t_ad21efa79f4636 337-338
+src/social_crawler/interfaces/cli.py
+  s_326b5bf6c8f8f1::t_150f302d267a26 160-169
+  s_326b5bf6c8f8f1::t_5bc16bcea7faa4 25,257-261,263
+docs/design/accounts-and-browsers.md
+  s_326b5bf6c8f8f1::t_01c4765176f7bb 9-10
+src/social_crawler/interfaces/web_static/app.js
+  s_326b5bf6c8f8f1::t_c72c233e8e3d9f 1936-1939
+  s_326b5bf6c8f8f1::t_cc46ba97ac6266 198,1727-1728,1732
+docs/operations/runtime.md
+  s_326b5bf6c8f8f1::t_4440ac4c4c0b22 7-14
+  s_326b5bf6c8f8f1::t_4a59b55e798464 71
+docs/guides/configuration.md
+  s_326b5bf6c8f8f1::t_4440ac4c4c0b22 70-73,96
+  s_326b5bf6c8f8f1::t_01c4765176f7bb 74
+deploy/docker/adspower/README.md
+  s_326b5bf6c8f8f1::t_a7f2bf96c92810 17-19,23-24
+src/social_crawler/interfaces/web.py
+  s_326b5bf6c8f8f1::t_687da1de052a65 52-55
+  s_326b5bf6c8f8f1::t_60a22a0348771d 1046-1047,1052-1058
+  s_326b5bf6c8f8f1::t_36e6ff1e639afd 2052-2059
+  s_326b5bf6c8f8f1::t_1aa813aee2183f 2111-2125,2158-2160
+  s_326b5bf6c8f8f1::t_4406bf5d8f546f 1169-1173,2309-2315,2355-2359
+tests/test_media.py
+  s_326b5bf6c8f8f1::t_1257b5df90a9ca 2,123-194
+compose.yaml
+  s_326b5bf6c8f8f1::t_6212afab5b1afa 20-21,60,74-91,93-107,113-114
+  s_326b5bf6c8f8f1::t_ae788747b4b162 92
+  s_326b5bf6c8f8f1::t_5aaadb70250ec1 31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "8825d28e8e48b3adb7de49c3753b440a0dad9614",
+  "prompts": {},
+  "humans": {
+    "h_b5330be8abb2bc": {
+      "author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  },
+  "sessions": {
+    "s_326b5bf6c8f8f1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c360-150d-7f00-8a8e-da1344f5904b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "haorenhui <haorenhui0911@gmail.com>"
+    }
+  }
+}
