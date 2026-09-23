@@ -1,0 +1,86 @@
+src/social_crawler/environments/managed_browser.py
+  s_6c98525a55fe7b::t_e10922eec2f2a7 18-27
+src/social_crawler/environments/session.py
+  s_6c98525a55fe7b::t_e10922eec2f2a7 33-36,109-111,113
+tests/test_adspower.py
+  s_6c98525a55fe7b::t_2c31340c31153b 152
+  s_6c98525a55fe7b::t_36719cfb73f53d 67-135,153-167
+  s_6c98525a55fe7b::t_055f1e8fc1bfbe 168-169
+tests/test_account_browser.py
+  s_6c98525a55fe7b::t_2662c25b748bfb 22,60-81
+  s_6c98525a55fe7b::t_5c5969dbf7918e 82-83
+src/social_crawler/interfaces/cli.py
+  s_6c98525a55fe7b::t_1667c2d450443f 159,168-171,274
+src/social_crawler/adapters/douyin/http.py
+  s_6c98525a55fe7b::t_56d1bb04e54f53 170
+tests/test_web.py
+  s_6c98525a55fe7b::t_14560482d1dec2 836-877,879-880
+  s_6c98525a55fe7b::t_d5bff0e20875fd 542-546
+  s_6c98525a55fe7b::t_4d9a55dfb0af0f 1853,1855,1859,1896-1898,1905
+  s_6c98525a55fe7b::t_981d662e538d6f 413-430
+  s_6c98525a55fe7b::t_58c24f6e486583 432,435-436
+  s_6c98525a55fe7b::t_1185d03073807c 835,878
+  s_6c98525a55fe7b::t_0fc86478d47548 431
+src/social_crawler/environments/cookie_capture.py
+  s_6c98525a55fe7b::t_1667c2d450443f 25,300-303
+src/social_crawler/orchestration/worker.py
+  s_6c98525a55fe7b::t_e10922eec2f2a7 72-74
+  s_6c98525a55fe7b::t_119754a4ca916d 54
+src/social_crawler/interfaces/web_static/app.js
+  s_6c98525a55fe7b::t_1890a162eb0b6c 199,275,1840,1842,1846-1849
+  s_6c98525a55fe7b::t_deee6a606acf09 205,273-274,276
+  s_6c98525a55fe7b::t_e6719abf7343df 191,193-198,200,203,266-268,270-271,278-279,285
+  s_6c98525a55fe7b::t_319d0e64f51adc 1841
+docs/guides/configuration.md
+  s_6c98525a55fe7b::t_56d1bb04e54f53 75-76
+  s_6c98525a55fe7b::t_69148d2b4477ac 77
+src/social_crawler/environments/account_browser.py
+  s_6c98525a55fe7b::t_2662c25b748bfb 35-49,227,229-233
+tests/test_network.py
+  s_6c98525a55fe7b::t_1185d03073807c 143-193
+  s_6c98525a55fe7b::t_286a5c2eeb3008 111,219-265
+  s_6c98525a55fe7b::t_981d662e538d6f 112-142,194-218
+CHANGELOG.md
+  s_6c98525a55fe7b::t_69148d2b4477ac 12
+  s_6c98525a55fe7b::t_56d1bb04e54f53 10-11,13
+src/social_crawler/interfaces/web.py
+  s_6c98525a55fe7b::t_981d662e538d6f 885-890,1096-1101
+  s_6c98525a55fe7b::t_1667c2d450443f 57,744-745,881-883,1090-1093,2309
+  s_6c98525a55fe7b::t_e90aa911176614 2302-2308
+  s_6c98525a55fe7b::t_58c24f6e486583 896,1171
+  s_6c98525a55fe7b::t_5ee4e521661080 2475-2479
+  s_6c98525a55fe7b::t_fcbaecd32e0145 2571
+docs/design/accounts-and-browsers.md
+  s_6c98525a55fe7b::t_56d1bb04e54f53 7
+  s_6c98525a55fe7b::t_69148d2b4477ac 9,25
+docs/guides/web-console.md
+  s_6c98525a55fe7b::t_56d1bb04e54f53 7
+  s_6c98525a55fe7b::t_69148d2b4477ac 23
+src/social_crawler/environments/network.py
+  s_6c98525a55fe7b::t_286a5c2eeb3008 140-142
+  s_6c98525a55fe7b::t_119754a4ca916d 148-153,206-215
+  s_6c98525a55fe7b::t_d4b620b68b0fcf 145,147,198-200,248-256,267-275
+src/social_crawler/adapters/douyin/security.py
+  s_6c98525a55fe7b::t_e10922eec2f2a7 16-19,56,110-114,122-148,153-154,157-160,323-325,328
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.6",
+  "base_commit_sha": "5c2f9a5e168d5eebd8312ba42504fee6d05946cd",
+  "prompts": {},
+  "humans": {
+    "h_b5330be8abb2bc": {
+      "author": "Social Crawler contributors <contributors@social-crawler.invalid>"
+    }
+  },
+  "sessions": {
+    "s_6c98525a55fe7b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0cc26-d5b3-7413-9495-0070d7b8e29b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "haorenhui <haorenhui0911@gmail.com>"
+    }
+  }
+}
