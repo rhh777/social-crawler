@@ -1,0 +1,21 @@
+# 复制到本地配置后，填入完整分享链接。不要提交真实 token 或 Cookie。
+[run]
+platform = "xhs"
+source_type = "posts"
+post_targets = [] # 每项一个帖子链接或 ID；建议保留分享链接里的访问参数
+adapter = "browser" # 已有完整访问参数时也可灰度选择 "httpx" 或 "curl_cffi"
+comment_limit = 20
+reply_parents = 3
+reply_limit = 10
+max_requests = 200
+max_seconds = 900
+min_interval = 5
+
+[environment]
+account_ref = "xhs-primary"
+profile_dir = "profiles/xhs-primary"
+headless = false
+consistency_policy = "warn"
+impersonate = "chrome150" # 与镜像内固定的 Chrome for Testing 150 保持一致
+proxy_file = "data/proxy.url"
+# Cookie 文件通过 --cookies 参数指定。

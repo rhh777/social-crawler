@@ -1,0 +1,78 @@
+name: 缺陷报告
+description: 报告功能异常或与文档不符的行为
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **不要粘贴 Cookie、账号信息、代理地址、密钥或采集到的个人信息。**贴日志和报告前请先删掉这些内容。
+
+        安全漏洞请走仓库 Security 页的私有漏洞报告（详见根目录 `SECURITY.md`），不要开公开 issue。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已查阅 `docs/` 下的相关文档
+          required: true
+        - label: 我已搜索过现有 issue
+          required: true
+        - label: 我确认下面填写的内容不含凭据或个人信息
+          required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 问题描述
+      description: 期望行为与实际行为分别是什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      description: 尽量给出可复现的最小步骤；涉及配置时贴脱敏后的片段
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志或报错
+      description: 脱敏后的相关输出
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 提交哈希或 tag
+    validations:
+      required: true
+
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: 运行方式
+      options:
+        - 本地 scripts/start_local.sh
+        - Docker Compose
+        - Kubernetes
+        - CLI
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: 操作系统与 Python 版本
+      placeholder: macOS 15 / Python 3.13.5
+    validations:
+      required: true

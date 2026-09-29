@@ -1,0 +1,22 @@
+[run]
+platform = "douyin"
+keywords = ["咖啡"]
+sort = "general"
+content_limit = 3
+comment_limit = 5
+reply_parents = 1
+reply_limit = 3
+max_requests = 40
+max_seconds = 900
+min_interval = 5
+
+[environment]
+account_ref = "douyin-primary"
+profile_dir = "profiles/cookie-login/douyin"
+headless = false
+consistency_policy = "warn"
+session_version = "1"
+impersonate = "chrome150"
+# 留空 UA 时按镜像内固定的 Chrome for Testing 150 动态匹配。
+# douyin_webid = "如运行材料中提供了 webid，可在本地配置中补充"
+proxy_file = "data/proxy.url"

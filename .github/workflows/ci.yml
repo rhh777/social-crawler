@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    # Tests use synthetic data only; this database exists for the schema
+    # integration variants and holds no platform data.
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: ci-only
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+        ports:
+          - 5432:5432
+
+    env:
+      CRAWLER_TEST_DATABASE_URL: postgresql+psycopg://postgres:ci-only@127.0.0.1:5432/postgres
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Install Chromium
+        run: uv run playwright install --with-deps chromium
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Test
+        run: uv run pytest -q
+
+      - name: Check publishable tree
+        run: python3 scripts/check_public_tree.py
+
+      - name: Build distributions
+        run: uv build --out-dir dist
+
+  # Downloads a pinned Chrome and KasmVNC, so keep it off every pull request.
+  container:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+
+      # Build only; the image bundles third-party components under their own
+      # licenses and is never published from CI. See THIRD-PARTY-NOTICES.md.
+      - name: Build application image
+        run: docker build --tag social-crawler:ci .

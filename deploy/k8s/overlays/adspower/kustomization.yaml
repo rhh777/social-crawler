@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: social-crawler
+resources:
+  - ../../base
+components:
+  - ../../components/adspower
+images:
+  - name: adspower-runtime
+    newName: adspower-runtime
+    newTag: latest

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: adspower-cache
+  labels:
+    app.kubernetes.io/name: social-crawler
+    app.kubernetes.io/component: adspower
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 10Gi

@@ -1,0 +1,29 @@
+# Local reference repositories.
+/references/
+# Local accounts and runtime data.
+.env
+.env.*
+!/.env.example
+/profiles/
+/browser_data/
+/data/
+/logs/
+social-crawler-local/
+/.venv/
+__pycache__/
+*.pyc
+.DS_Store
+/.idea/
+/.launcher.lock/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+/dist/
+/build/
+/config.local.toml
+/deploy/k8s/overlays/dev-private/
+/cookies*.json
+/cookies*.txt
+# Local backups and generated artifacts.
+/.private-backup/
+/artifacts/

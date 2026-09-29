@@ -1,0 +1,25 @@
+[run]
+platform = "rednote"
+keywords = ["coffee"]
+sort = "general"
+content_limit = 3
+comment_limit = 5
+reply_parents = 1
+reply_limit = 3
+max_requests = 40
+max_seconds = 900
+min_interval = 5
+
+[environment]
+account_ref = "rednote-primary"
+profile_dir = "profiles/rednote-primary"
+headless = false
+consistency_policy = "warn"
+session_version = "1"
+impersonate = "chrome150"
+# RedNote 不强制中国区语言和时区；建议填写账号平时使用的真实环境。
+# locale = "en-US"
+# timezone_id = "America/Los_Angeles"
+# Cookie 文件通过 --cookies 参数指定，不放入配置或 Git。
+# expected_user_id = "在线检测时核对的账号 ID"
+proxy_file = "data/proxy.url"

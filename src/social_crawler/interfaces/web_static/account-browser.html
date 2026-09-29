@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>账号浏览器 · 拾集</title>
+<link rel="stylesheet" href="/account-browser.css?v=20260920-kasm-1"></head>
+<body><header class="viewer-bar"><a href="/#accounts" target="_blank" rel="noopener">← 账号列表</a><h1 id="title">账号浏览器</h1><span id="engine"></span><button id="reopen" hidden>重新打开</button><button id="save-login" class="primary" disabled>保存登录并关闭</button><button id="close-browser" disabled>关闭浏览器</button></header>
+<div class="viewer-status"><p id="message" role="status">正在打开该账号的浏览器，保留现有登录…</p><span id="hint">在浏览器中完成登录后，点击“保存登录并关闭”即可用于采集。</span></div>
+<main><iframe id="desktop" title="账号的远程浏览器" allow="clipboard-read; clipboard-write; fullscreen" allowfullscreen hidden></iframe><div id="placeholder">正在准备浏览器…</div></main>
+<script src="/account-browser.js?v=20260922-collection-viewer-1" defer></script></body></html>

@@ -1,0 +1,27 @@
+[run]
+platform = "xhs"
+keywords = ["咖啡"]
+sort = "general"
+content_limit = 3
+comment_limit = 5
+reply_parents = 1
+reply_limit = 3
+max_requests = 40
+max_seconds = 900
+min_interval = 5
+
+[environment]
+account_ref = "xhs-primary"
+profile_dir = "profiles/xhs-primary"
+browser_provider = "chromium"
+# 切换到 AdsPower 时改为 "adspower"，并配置对应环境 ID：
+# adspower_profile_id = "<AdsPower environment ID>"
+# 切换到 Kameleo 时改为 "kameleo"，并配置桌面 Chrome profile UUID：
+# kameleo_profile_id = "11111111-1111-4111-8111-111111111111"
+headless = false
+consistency_policy = "warn"
+session_version = "1"
+impersonate = "chrome150"
+# Cookie 文件通过 --cookies 参数指定，不放入配置或 Git。
+# expected_user_id = "在线检测时核对的账号 ID"
+proxy_file = "data/proxy.url"

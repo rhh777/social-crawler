@@ -1,0 +1,23 @@
+[run]
+platform = "douyin"
+keywords = ["咖啡"]
+sort = "general"
+content_limit = 1
+comment_limit = 5
+reply_parents = 1
+reply_limit = 3
+max_requests = 8
+max_seconds = 180
+max_pages = 1
+min_interval = 8
+request_timeout = 30
+network_retries = 0
+
+[environment]
+account_ref = "douyin-canary"
+profile_dir = "profiles/douyin-canary"
+headless = true
+consistency_policy = "warn"
+session_version = "1"
+impersonate = "chrome150"
+proxy_file = "data/proxy.url"

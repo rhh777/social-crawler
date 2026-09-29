@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Social Crawler">
+  <defs>
+    <linearGradient id="surface" x1="7" y1="5" x2="41" y2="43" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2d8067"/>
+      <stop offset="1" stop-color="#185544"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#surface)"/>
+  <path d="M14 14.5 24 23m10-8.5L24 23m0 0 9.5 8.5M24 23l-9.5 8.5" fill="none" stroke="#bfe6d6" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="14" cy="14.5" r="4" fill="#fff"/>
+  <circle cx="34" cy="14.5" r="4" fill="#fff"/>
+  <circle cx="24" cy="23" r="5" fill="#f2c96d"/>
+  <circle cx="14.5" cy="31.5" r="3.5" fill="#fff"/>
+  <circle cx="33.5" cy="31.5" r="3.5" fill="#fff"/>
+  <path d="M17 38h14" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+</svg>

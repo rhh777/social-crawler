@@ -1,0 +1,114 @@
+services:
+  postgres:
+    image: postgres:18-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: crawler
+      POSTGRES_USER: crawler
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-development-only}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crawler -d crawler"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    ports:
+      - "${CRAWLER_COMPOSE_BIND_HOST:-127.0.0.1}:${CRAWLER_POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+
+  app:
+    # The pinned Chrome for Testing and KasmVNC packages are amd64-only.
+    platform: linux/amd64
+    build:
+      context: .
+    restart: unless-stopped
+    init: true
+    command:
+      - sh
+      - -c
+      - >-
+        rm -f /tmp/.X99-lock /tmp/.X11-unix/X99;
+        Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp &
+        while [ ! -S /tmp/.X11-unix/X99 ]; do sleep 0.1; done;
+        exec social-crawler-web --host 0.0.0.0 --port "$${CRAWLER_WEB_PORT:-8765}" --root /app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      CRAWLER_DATABASE_URL: postgresql+psycopg://crawler:${POSTGRES_PASSWORD:-local-development-only}@postgres:5432/crawler
+      CRAWLER_IMAGE_DIGEST: ${CRAWLER_IMAGE_DIGEST:-unavailable}
+      CRAWLER_WEB_HOST: 0.0.0.0
+      CRAWLER_WEB_PORT: ${CRAWLER_WEB_PORT:-8765}
+      CRAWLER_WORKERS: ${CRAWLER_WORKERS:-2}
+      CRAWLER_WEB_ALLOWED_HOSTS: ${CRAWLER_WEB_ALLOWED_HOSTS:-}
+      CRAWLER_ADSPOWER_API_URL: ${CRAWLER_ADSPOWER_API_URL:-http://127.0.0.1:50325}
+      CRAWLER_ADSPOWER_START_TIMEOUT: ${CRAWLER_ADSPOWER_START_TIMEOUT:-90}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      CRAWLER_AGENT_API_URL: ${CRAWLER_AGENT_API_URL:-${ANTHROPIC_BASE_URL:-https://api.anthropic.com}}
+      CRAWLER_AGENT_MODEL: ${CRAWLER_AGENT_MODEL:-sonnet}
+      CRAWLER_DEFAULT_HEADLESS: ${CRAWLER_DEFAULT_HEADLESS:-true}
+      CRAWLER_PROXY_RELAY_HOST: ${CRAWLER_PROXY_RELAY_HOST:-}
+      CRAWLER_PROXY_RELAY_MAP: ${CRAWLER_PROXY_RELAY_MAP:-}
+      DISPLAY: :99
+    ports:
+      - "${CRAWLER_COMPOSE_BIND_HOST:-127.0.0.1}:${CRAWLER_WEB_PORT:-8765}:${CRAWLER_WEB_PORT:-8765}"
+    shm_size: 1gb
+    volumes:
+      - crawler-data:/app/data
+      - crawler-profiles:/app/profiles
+      - crawler-artifacts:/app/artifacts
+      - x11:/tmp/.X11-unix
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import os, urllib.request; urllib.request.urlopen('http://127.0.0.1:' + os.environ['CRAWLER_WEB_PORT'] + '/api/health', timeout=3)",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  adspower:
+    profiles: ["adspower"]
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: deploy/docker/adspower/Dockerfile
+      additional_contexts:
+        crawler-runtime: service:app
+      args:
+        RUNTIME_IMAGE: crawler-runtime
+    restart: unless-stopped
+    init: true
+    network_mode: "service:app"
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      ADS_API_KEY: ${ADS_API_KEY:-}
+      ADS_KERNEL_VERSION: ${ADS_KERNEL_VERSION-151}
+      ADS_HEALTH_TIMEOUT: ${ADS_HEALTH_TIMEOUT:-5}
+      ADS_HEALTH_FAILURES: ${ADS_HEALTH_FAILURES:-18}
+      PORT: 50325
+      DISPLAY: :99
+    shm_size: 1gb
+    volumes:
+      - adspower-cache:/home/crawler/.adspowerCli
+      - x11:/tmp/.X11-unix
+    healthcheck:
+      test: ["CMD-SHELL", "test -f /tmp/adspower-ready && adspower-healthy"]
+      interval: 10s
+      timeout: 10s
+      retries: 180
+      start_period: 10s
+
+volumes:
+  postgres-data:
+  crawler-data:
+  crawler-profiles:
+  crawler-artifacts:
+  adspower-cache:
+  x11:

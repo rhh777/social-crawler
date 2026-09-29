@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "social-crawler"
+version = "0.1.0"
+description = "Bounded, resumable Xiaohongshu and Douyin collection"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD-PARTY-NOTICES.md"]
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "alembic>=1.16,<2",
+  "sqlalchemy>=2.0.40,<2.1",
+  "psycopg[binary]>=3.2,<4",
+  "pydantic>=2.11,<3",
+  "playwright>=1.60,<2",
+  "curl-cffi>=0.11,<1",
+  "croniter>=6.2.4,<7",
+  "httpx[socks]>=0.28.1,<0.29",
+  "xhshow>=0.2,<0.3",
+  "claude-agent-sdk>=0.2.157,<0.3",
+  "anyio>=4,<5",
+  "pillow>=11,<13",
+  "pypdf>=6,<7",
+  "python-dotenv>=1.1,<2",
+]
+
+[project.scripts]
+social-crawler = "social_crawler.interfaces.cli:main"
+social-crawler-web = "social_crawler.interfaces.web:main"
+
+# Explicit files included in source distributions.
+[tool.hatch.build.targets.sdist]
+only-include = [
+  "src", "tests", "configs", "docs", "scripts",
+  "deploy/README.md", "deploy/docker", "deploy/k8s/README.md", "deploy/k8s/base",
+  "deploy/k8s/components", "deploy/k8s/overlays/adspower",
+  "pyproject.toml", "uv.lock", "README.md", "LICENSE", "NOTICE", "THIRD-PARTY-NOTICES.md",
+  "CONTRIBUTING.md", "SECURITY.md", "CHANGELOG.md", ".github",
+  "alembic.ini", "compose.yaml", "Dockerfile",
+  ".env.example", ".gitignore", ".dockerignore", ".python-version",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3,<10", "pytest-asyncio>=1,<2", "ruff>=0.11,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = ["postgres: isolated local PostgreSQL integration", "browser: local browser fixtures (no platform traffic)"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+extend-exclude = [
+  "references",
+  ".private-backup",
+  "src/social_crawler/vendor",
+]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

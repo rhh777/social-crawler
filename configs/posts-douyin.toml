@@ -1,0 +1,20 @@
+# 复制到本地配置后，填入帖子链接、分享短链或帖子 ID。
+[run]
+platform = "douyin"
+source_type = "posts"
+post_targets = []
+comment_limit = 20
+reply_parents = 3
+reply_limit = 10
+max_requests = 200
+max_seconds = 900
+min_interval = 5
+
+[environment]
+account_ref = "douyin-primary"
+profile_dir = "profiles/cookie-login/douyin"
+headless = false
+consistency_policy = "warn"
+impersonate = "chrome150"
+proxy_file = "data/proxy.url"
+# Cookie / storage_state 文件通过 --cookies 参数指定。

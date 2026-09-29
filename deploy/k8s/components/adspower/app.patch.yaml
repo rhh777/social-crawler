@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: social-crawler
+spec:
+  template:
+    spec:
+      containers:
+        - name: app
+          volumeMounts:
+            - name: x11
+              mountPath: /tmp/.X11-unix
+        - name: adspower
+          image: adspower-runtime
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: ADS_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: adspower-api
+                  key: api-key
+            - name: ADS_KERNEL_VERSION
+              value: "151"
+            - name: PORT
+              value: "50325"
+            - name: DISPLAY
+              value: :99
+          startupProbe:
+            exec:
+              command: ["sh", "-c", "test -f /tmp/adspower-ready && adspower-healthy"]
+            periodSeconds: 5
+            timeoutSeconds: 10
+            failureThreshold: 180
+          readinessProbe:
+            exec:
+              command: ["sh", "-c", "test -f /tmp/adspower-ready && adspower-healthy"]
+            periodSeconds: 10
+            timeoutSeconds: 10
+            failureThreshold: 3
+          livenessProbe:
+            exec:
+              command: ["adspower-healthy"]
+            periodSeconds: 20
+            timeoutSeconds: 10
+            failureThreshold: 6
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1Gi
+            limits:
+              cpu: "2"
+              memory: 3Gi
+          volumeMounts:
+            - name: adspower-cache
+              mountPath: /home/crawler/.adspowerCli
+            - name: dshm
+              mountPath: /dev/shm
+            - name: x11
+              mountPath: /tmp/.X11-unix
+      volumes:
+        - name: adspower-cache
+          persistentVolumeClaim:
+            claimName: adspower-cache
+        - name: x11
+          emptyDir: {}
